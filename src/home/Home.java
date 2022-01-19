@@ -1,12 +1,34 @@
 package home;
 import java.awt.*;
 import javax.swing.*;
+import homeComponents.IssueBookPanel;
+import homeComponents.NewBookPanel;
+import homeComponents.NewMemberPanel;
+import homeComponents.ReturnBookPanel;
+import homeComponents.StatisticsPanel;
 /**
  * @author SHIBIN VERENGAL
  */
 public class Home extends javax.swing.JFrame {
+    NewMemberPanel newMemberPanel = new NewMemberPanel();
+    NewBookPanel newBookPanel = new NewBookPanel();
+    StatisticsPanel statisticsPanel = new StatisticsPanel();
+    IssueBookPanel issueBookPanel = new IssueBookPanel();
+    ReturnBookPanel returnBookPanel = new ReturnBookPanel();
     public Home() {
         initComponents();
+        
+        panelArea.add(newMemberPanel);
+        panelArea.add(newBookPanel);
+        panelArea.add(statisticsPanel);
+        panelArea.add(issueBookPanel);
+        panelArea.add(returnBookPanel);
+        
+        newMemberPanel.setVisible(true);
+        newBookPanel.setVisible(false);
+        statisticsPanel.setVisible(false);
+        issueBookPanel.setVisible(false);
+        returnBookPanel.setVisible(false);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -26,12 +48,15 @@ public class Home extends javax.swing.JFrame {
         returnBook = new javax.swing.JLabel();
         btn_logout = new javax.swing.JPanel();
         logout = new javax.swing.JLabel();
+        panelArea = new javax.swing.JLayeredPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         backgroud.setBackground(new java.awt.Color(35, 46, 51));
+        backgroud.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sidepanel.setBackground(new java.awt.Color(27, 32, 40));
+        sidepanel.setPreferredSize(new java.awt.Dimension(280, 720));
 
         btn_newMember.setBackground(new java.awt.Color(108, 109, 111));
         btn_newMember.setForeground(new java.awt.Color(27, 32, 40));
@@ -51,7 +76,7 @@ public class Home extends javax.swing.JFrame {
         btn_newMemberLayout.setHorizontalGroup(
             btn_newMemberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_newMemberLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(newMember, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
@@ -234,21 +259,13 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btn_returnBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_logout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout backgroudLayout = new javax.swing.GroupLayout(backgroud);
-        backgroud.setLayout(backgroudLayout);
-        backgroudLayout.setHorizontalGroup(
-            backgroudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroudLayout.createSequentialGroup()
-                .addComponent(sidepanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 984, Short.MAX_VALUE))
-        );
-        backgroudLayout.setVerticalGroup(
-            backgroudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sidepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        backgroud.add(sidepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 772));
+
+        panelArea.setLayout(new java.awt.CardLayout());
+        backgroud.add(panelArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 1040, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -262,6 +279,7 @@ public class Home extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
     void setColor(JPanel panel){
@@ -276,7 +294,13 @@ public class Home extends javax.swing.JFrame {
         resetColor(btn_newBook);
         resetColor(btn_Statistics);
         resetColor(btn_issueBook);
-        resetColor(btn_returnBook);    
+        resetColor(btn_returnBook);
+        
+        newMemberPanel.setVisible(true);
+        newBookPanel.setVisible(false);
+        statisticsPanel.setVisible(false);
+        issueBookPanel.setVisible(false);
+        returnBookPanel.setVisible(false);
     }//GEN-LAST:event_btn_newMemberMousePressed
 
     private void btn_newBookMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_newBookMousePressed
@@ -285,6 +309,12 @@ public class Home extends javax.swing.JFrame {
         resetColor(btn_Statistics);
         resetColor(btn_issueBook);
         resetColor(btn_returnBook);
+        
+        newMemberPanel.setVisible(false);
+        newBookPanel.setVisible(true);
+        statisticsPanel.setVisible(false);
+        issueBookPanel.setVisible(false);
+        returnBookPanel.setVisible(false);
     }//GEN-LAST:event_btn_newBookMousePressed
 
     private void btn_StatisticsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_StatisticsMousePressed
@@ -293,6 +323,12 @@ public class Home extends javax.swing.JFrame {
         resetColor(btn_newMember);
         resetColor(btn_issueBook);
         resetColor(btn_returnBook);
+        
+        newMemberPanel.setVisible(false);
+        newBookPanel.setVisible(false);
+        statisticsPanel.setVisible(true);
+        issueBookPanel.setVisible(false);
+        returnBookPanel.setVisible(false);
     }//GEN-LAST:event_btn_StatisticsMousePressed
 
     private void btn_issueBookMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_issueBookMousePressed
@@ -301,6 +337,12 @@ public class Home extends javax.swing.JFrame {
         resetColor(btn_Statistics);
         resetColor(btn_newMember);
         resetColor(btn_returnBook);
+        
+        newMemberPanel.setVisible(false);
+        newBookPanel.setVisible(false);
+        statisticsPanel.setVisible(false);
+        issueBookPanel.setVisible(true);
+        returnBookPanel.setVisible(false);
     }//GEN-LAST:event_btn_issueBookMousePressed
 
     private void btn_returnBookMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_returnBookMousePressed
@@ -309,6 +351,12 @@ public class Home extends javax.swing.JFrame {
         resetColor(btn_Statistics);
         resetColor(btn_issueBook);
         resetColor(btn_newMember);
+        
+        newMemberPanel.setVisible(false);
+        newBookPanel.setVisible(false);
+        statisticsPanel.setVisible(false);
+        issueBookPanel.setVisible(false);
+        returnBookPanel.setVisible(true);
     }//GEN-LAST:event_btn_returnBookMousePressed
     
     public static void main(String args[]) {
@@ -356,6 +404,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel logout;
     private javax.swing.JLabel newBook;
     private javax.swing.JLabel newMember;
+    private javax.swing.JLayeredPane panelArea;
     private javax.swing.JLabel returnBook;
     private javax.swing.JPanel sidepanel;
     private javax.swing.JLabel statistics;
