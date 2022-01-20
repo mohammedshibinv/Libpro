@@ -451,6 +451,9 @@
                   <Color blue="28" green="20" red="1b" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_logoutMousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">

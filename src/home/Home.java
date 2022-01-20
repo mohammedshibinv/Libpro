@@ -6,6 +6,7 @@ import homeComponents.NewBookPanel;
 import homeComponents.NewMemberPanel;
 import homeComponents.ReturnBookPanel;
 import homeComponents.StatisticsPanel;
+import login.Login;
 /**
  * @author SHIBIN VERENGAL
  */
@@ -262,6 +263,11 @@ public class Home extends javax.swing.JFrame {
 
         btn_logout.setBackground(new java.awt.Color(27, 32, 40));
         btn_logout.setForeground(new java.awt.Color(27, 32, 40));
+        btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btn_logoutMousePressed(evt);
+            }
+        });
 
         logout.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         logout.setForeground(new java.awt.Color(255, 255, 255));
@@ -413,6 +419,11 @@ public class Home extends javax.swing.JFrame {
         issueBookPanel.setVisible(false);
         returnBookPanel.setVisible(true);
     }//GEN-LAST:event_btn_returnBookMousePressed
+
+    private void btn_logoutMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMousePressed
+        setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btn_logoutMousePressed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
