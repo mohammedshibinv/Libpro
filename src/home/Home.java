@@ -17,6 +17,7 @@ public class Home extends javax.swing.JFrame {
     ReturnBookPanel returnBookPanel = new ReturnBookPanel();
     public Home() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         
         panelArea.add(newMemberPanel);
         panelArea.add(newBookPanel);
