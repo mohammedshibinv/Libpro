@@ -180,7 +180,7 @@ public class NewBookPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Successfully Updated");
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Student Id allready exist");
+            JOptionPane.showMessageDialog(null,"Book Id allready exist");
         }
     }//GEN-LAST:event_btn_saveActionPerformed
 
