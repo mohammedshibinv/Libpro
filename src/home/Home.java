@@ -55,6 +55,7 @@ public class Home extends javax.swing.JFrame {
         btn_returnBookFlag = new javax.swing.JPanel();
         btn_logout = new javax.swing.JPanel();
         logout = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         panelArea = new javax.swing.JLayeredPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,6 +65,7 @@ public class Home extends javax.swing.JFrame {
 
         sidepanel.setBackground(new java.awt.Color(27, 32, 40));
         sidepanel.setPreferredSize(new java.awt.Dimension(280, 720));
+        sidepanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_newMember.setBackground(new java.awt.Color(108, 109, 111));
         btn_newMember.setForeground(new java.awt.Color(27, 32, 40));
@@ -105,6 +107,8 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btn_newMemberFlag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        sidepanel.add(btn_newMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 274, -1));
+
         btn_newBook.setBackground(new java.awt.Color(27, 32, 40));
         btn_newBook.setForeground(new java.awt.Color(27, 32, 40));
         btn_newBook.setPreferredSize(new java.awt.Dimension(280, 70));
@@ -143,6 +147,8 @@ public class Home extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btn_newBookFlag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        sidepanel.add(btn_newBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 213, 274, -1));
 
         btn_Statistics.setBackground(new java.awt.Color(27, 32, 40));
         btn_Statistics.setForeground(new java.awt.Color(27, 32, 40));
@@ -183,6 +189,8 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btn_statisticsFlag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        sidepanel.add(btn_Statistics, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 296, 274, -1));
+
         btn_issueBook.setBackground(new java.awt.Color(27, 32, 40));
         btn_issueBook.setForeground(new java.awt.Color(27, 32, 40));
         btn_issueBook.setPreferredSize(new java.awt.Dimension(280, 70));
@@ -221,6 +229,8 @@ public class Home extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btn_issueBookFlag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        sidepanel.add(btn_issueBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 379, 274, -1));
 
         btn_returnBook.setBackground(new java.awt.Color(27, 32, 40));
         btn_returnBook.setForeground(new java.awt.Color(27, 32, 40));
@@ -261,6 +271,8 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(btn_returnBookFlag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        sidepanel.add(btn_returnBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 462, 274, -1));
+
         btn_logout.setBackground(new java.awt.Color(27, 32, 40));
         btn_logout.setForeground(new java.awt.Color(27, 32, 40));
         btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -291,34 +303,12 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout sidepanelLayout = new javax.swing.GroupLayout(sidepanel);
-        sidepanel.setLayout(sidepanelLayout);
-        sidepanelLayout.setHorizontalGroup(
-            sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn_newMember, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(btn_newBook, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(btn_Statistics, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(btn_issueBook, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(btn_returnBook, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-            .addComponent(btn_logout, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        sidepanelLayout.setVerticalGroup(
-            sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidepanelLayout.createSequentialGroup()
-                .addGap(123, 123, 123)
-                .addComponent(btn_newMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_newBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_Statistics, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_issueBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_returnBook, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_logout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
+        sidepanel.add(btn_logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 545, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Old English Text MT", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LibPro");
+        sidepanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         backgroud.add(sidepanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 772));
 
@@ -472,6 +462,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel btn_returnBookFlag;
     private javax.swing.JPanel btn_statisticsFlag;
     private javax.swing.JLabel issueBookLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logout;
     private javax.swing.JLabel newBookLabel;
     private javax.swing.JLabel newMemberLabel;
