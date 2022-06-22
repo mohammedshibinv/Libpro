@@ -11,6 +11,7 @@ public class AddBookPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -19,12 +20,16 @@ public class AddBookPanel extends javax.swing.JPanel {
         nameTextField = new javax.swing.JTextField();
         publisherTextField = new javax.swing.JTextField();
         yearTextField = new javax.swing.JTextField();
-        btn_save = new javax.swing.JButton();
         btn_clear = new javax.swing.JButton();
+        btn_save = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(35, 46, 51));
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 590));
+
+        jPanel1.setBackground(new java.awt.Color(35, 46, 51));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 590));
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,6 +71,14 @@ public class AddBookPanel extends javax.swing.JPanel {
             }
         });
 
+        btn_clear.setForeground(new java.awt.Color(27, 32, 40));
+        btn_clear.setText("CLEAR");
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
+            }
+        });
+
         btn_save.setBackground(new java.awt.Color(255, 255, 255));
         btn_save.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 12)); // NOI18N
         btn_save.setForeground(new java.awt.Color(27, 32, 40));
@@ -77,89 +90,87 @@ public class AddBookPanel extends javax.swing.JPanel {
             }
         });
 
-        btn_clear.setForeground(new java.awt.Color(27, 32, 40));
-        btn_clear.setText("CLEAR");
-        btn_clear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_clearActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(276, 276, 276)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(68, 68, 68)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_save, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(btn_clear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bookIDTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(publisherTextField)
+                    .addComponent(yearTextField, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(307, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(bookIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(publisherTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(yearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_save)
+                    .addComponent(btn_clear))
+                .addContainerGap(265, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(276, 276, 276)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(57, 57, 57))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(78, 78, 78)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn_save, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                        .addGap(45, 45, 45)
-                        .addComponent(btn_clear, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
-                    .addComponent(publisherTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-                    .addComponent(bookIDTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(yearTextField)
-                    .addComponent(nameTextField))
-                .addGap(307, 307, 307))
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel2)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bookIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(publisherTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 29, 29)
-                        .addComponent(yearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btn_save)
-                    .addComponent(btn_clear))
-                .addContainerGap(220, Short.MAX_VALUE))
+            .addGap(0, 590, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bookIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookIDTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bookIDTextFieldActionPerformed
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        bookIDTextField.setText("");
+        nameTextField.setText("");
+        publisherTextField.setText("");
+        yearTextField.setText("");
+    }                                         
 
-    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextFieldActionPerformed
-
-    private void publisherTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publisherTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_publisherTextFieldActionPerformed
-
-    private void yearTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yearTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_yearTextFieldActionPerformed
-
-    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String bookID = bookIDTextField.getText();
         String name = nameTextField.getText();
         String publisher = publisherTextField.getText();
@@ -173,16 +184,24 @@ public class AddBookPanel extends javax.swing.JPanel {
         catch(Exception e){
             JOptionPane.showMessageDialog(null,"Book Id allready exist");
         }
-    }//GEN-LAST:event_btn_saveActionPerformed
+    }                                        
 
-    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
-        bookIDTextField.setText("");
-        nameTextField.setText("");
-        publisherTextField.setText("");
-        yearTextField.setText("");
-    }//GEN-LAST:event_btn_clearActionPerformed
+    private void yearTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+    }                                             
 
+    private void publisherTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        // TODO add your handling code here:
+    }                                                  
 
+    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+    }                                             
+
+    private void bookIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        // TODO add your handling code here:
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bookIDTextField;
     private javax.swing.JButton btn_clear;
@@ -191,6 +210,7 @@ public class AddBookPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField publisherTextField;
     private javax.swing.JTextField yearTextField;
